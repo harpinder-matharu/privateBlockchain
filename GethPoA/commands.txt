@@ -13,8 +13,9 @@ geth --networkid 1995 --datadir "./data" \
 --port 30304 --http --http.corsdomain "*" --http.port 8549 \
 --http.api personal,eth,net,web3 \
 --ws --ws.port 8550 \
---miner.etherbase "0xcEfa5Aa8E6B4E9A66E49276A1DB7Ea3dC267c8aB"
-
+--unlock 0xcEfa5Aa8E6B4E9A66E49276A1DB7Ea3dC267c8aB --password password.txt \
+--miner.etherbase "0xcEfa5Aa8E6B4E9A66E49276A1DB7Ea3dC267c8aB" \
+--allow-insecure-unlock
 
 bootnode -nodekey "./boot.key" -verbosity 7 -addr "127.0.0.1:30301"
 
@@ -24,10 +25,24 @@ bootnode -nodekey "./boot.key" -verbosity 7 -addr "127.0.0.1:30301"
 
 
 testing:
+
+for running two 
 geth --networkid 1995 --datadir "./data" \
 --ipcpath "./data/geth.ipc" \
 --bootnodes enode://ea2cdc3d9b605e07b280ac273c7faa804f89bdf3852a8b3d6bb7251e887b65b5031a3f2d441136a72ee196e62d0b9b711b1b037a48e1e1909ac3ee4e9912ad2d@127.0.0.1:30301 \
---port 30303 --http --http.corsdomain "*" --authrpc.port 8545 \
+--port 30303 --http --http.corsdomain "*" --authrpc.port 8546 \
+--http.api personal,eth,net,web3 \
+--ws --ws.port 8547 \
+--unlock 0xCc313E972afe1aE566d11957070bd560b42501f5 --password password.txt \
+--miner.etherbase "0xCc313E972afe1aE566d11957070bd560b42501f5" --mine \
+--allow-insecure-unlock
+
+geth --networkid 1995 --datadir "./data" \
+--ipcpath "./data/geth.ipc" \
+--bootnodes enode://ea2cdc3d9b605e07b280ac273c7faa804f89bdf3852a8b3d6bb7251e887b65b5031a3f2d441136a72ee196e62d0b9b711b1b037a48e1e1909ac3ee4e9912ad2d@127.0.0.1:30301 \
+--port 30303 --http --http.corsdomain "*" --http.port 8545 \
 --http.api personal,eth,net,web3 \
 --ws --ws.port 8546 \
---miner.etherbase "0xCc313E972afe1aE566d11957070bd560b42501f5" --mine
+--unlock 0xCc313E972afe1aE566d11957070bd560b42501f5 --password password.txt \
+--miner.etherbase "0xCc313E972afe1aE566d11957070bd560b42501f5" --mine \
+--allow-insecure-unlock

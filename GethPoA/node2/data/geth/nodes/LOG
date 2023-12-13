@@ -238,3 +238,42 @@
 12:40:29.653219 version@stat F·[2 1] S·7KiB[7KiB 623B] Sc·[0.50 0.00]
 12:40:29.676819 db@janitor F·5 G·0
 12:40:29.676842 db@open done T·30.099208ms
+=============== Dec 12, 2023 (IST) ===============
+16:00:28.239068 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:00:28.239681 version@stat F·[2 1] S·7KiB[7KiB 623B] Sc·[0.50 0.00]
+16:00:28.239698 db@open opening
+16:00:28.239747 journal@recovery F·1
+16:00:28.240004 journal@recovery recovering @55
+16:00:28.244670 memdb@flush created L0@57 N·1 S·164B "loc..seq,v1747":"loc..seq,v1747"
+16:00:28.244991 version@stat F·[3 1] S·7KiB[7KiB 623B] Sc·[0.75 0.00]
+16:00:28.262265 db@janitor F·6 G·0
+16:00:28.262294 db@open done T·22.58775ms
+=============== Dec 12, 2023 (IST) ===============
+16:00:43.306459 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:00:43.306586 version@stat F·[3 1] S·7KiB[7KiB 623B] Sc·[0.75 0.00]
+16:00:43.306598 db@open opening
+16:00:43.306637 journal@recovery F·1
+16:00:43.306778 journal@recovery recovering @58
+16:00:43.311056 memdb@flush created L0@60 N·1 S·164B "loc..seq,v1749":"loc..seq,v1749"
+16:00:43.311515 version@stat F·[4 1] S·8KiB[7KiB 623B] Sc·[1.00 0.00]
+16:00:43.326684 db@janitor F·7 G·0
+16:00:43.326730 db@open done T·20.124583ms
+16:00:43.326813 table@compaction L0·4 -> L1·1 S·8KiB Q·1750
+16:00:43.332165 table@build created L1@63 N·12 S·618B "loc..seq,v1749":"version,v1"
+16:00:43.332264 version@stat F·[0 1] S·618B[0B 618B] Sc·[0.00 0.00]
+16:00:43.336108 table@compaction committed F-4 S-7KiB Ke·0 D·674 T·9.270375ms
+16:00:43.338516 table@remove removed @57
+16:00:43.338646 table@remove removed @54
+16:00:43.338709 table@remove removed @51
+16:00:43.338924 table@remove removed @50
+=============== Dec 13, 2023 (IST) ===============
+11:27:38.641321 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:27:38.641822 version@stat F·[0 1] S·618B[0B 618B] Sc·[0.00 0.00]
+11:27:38.641836 db@open opening
+11:27:38.641893 journal@recovery F·1
+11:27:38.642040 journal@recovery recovering @61
+11:27:38.647868 memdb@flush created L0@64 N·968 S·9KiB "loc..seq,v1751":"n:u..ong,v1767"
+11:27:38.648317 version@stat F·[1 1] S·10KiB[9KiB 618B] Sc·[0.25 0.00]
+11:27:38.664643 db@janitor F·5 G·1
+11:27:38.664658 db@janitor removing table-60
+11:27:38.664726 db@open done T·22.882667ms
